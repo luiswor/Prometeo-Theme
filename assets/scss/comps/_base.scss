@@ -1,0 +1,76 @@
+@import "../utils/utils";
+
+:root {
+    --color: #999;
+    --header-height: 76px;
+}
+
+html {
+    width: 100%;
+    font-family: $t_font, sans-serif;
+    font-size: 16px;
+    color: $dark_blue;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background-color: $bg_color;
+    overflow: auto;
+
+    &.admin-bar {
+        --has-bar-top: 32px;
+    }
+
+    --container: 1400px;
+
+    @include xl {
+        --container: 1100px;
+    }
+
+    @include lg {
+        --container: 980px;
+    }
+
+    @include md {
+        --container: 700px;
+    }
+
+    @include sm {
+        --container: 580px;
+    }
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.main {
+    background-color: $white;
+    border-radius: 0 0 3rem 3rem;
+    position: relative;
+    z-index: 10;
+
+    &::before {
+        content: url('../images/flame.svg');
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        scale: 2;
+        translate: -50% 5% 0;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 1rem;
+
+}
+
+button, [type="submit"], a {
+    cursor: pointer;
+}

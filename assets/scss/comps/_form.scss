@@ -1,0 +1,55 @@
+@import "../utils/utils";
+
+
+input, textarea, select {
+    font-size: 1.1rem;
+    padding: 14px 20px !important;
+    border: solid 1px $light_blue !important;
+}
+
+[type="submit"] {
+    background-color: $blue_slide;
+    color: #fff;
+}
+
+
+.wp-block-categories {
+    display: block;
+    margin: 1rem 0 2rem;
+
+    .cat-item {
+        font-size: 1.3rem;
+        padding: 10px 0;
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.wp-block-latest-posts {
+    //list-style: url('../images/flame.svg') !important;
+
+    li {
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: url('../images/flame.svg');
+            color: $orange;
+            margin-right: 10px;
+        }
+
+        a {
+            display: block;
+            font-size: 1.4rem;
+            font-family: $s_font;
+            padding: 1rem 0;
+            transition: color .2s;
+
+            &:hover {
+                color: $peach;
+            }
+        }
+    }
+}

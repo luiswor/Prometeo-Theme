@@ -1,0 +1,84 @@
+@import "../utils/utils";
+
+.footer {
+    width: 100%;
+    min-height: 300px;
+    background-color: $dark_blue_bg;
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+    color: $white;
+
+    @include sm {
+        position: static;
+    }
+
+    &_list {
+        list-style: none;
+        margin: 0;
+        padding: 2rem;
+        width: 100%;
+        max-width: 300px;
+
+        @include md {
+            padding: 2rem 0;
+        }
+
+        li {
+            margin: 10px 0 30px;
+            font-size: 1rem;
+            opacity: .8;
+
+            @include md {
+                margin: 10px 0;
+            }
+
+            strong {
+                line-height: 2;
+                font-weight: 800;
+            }
+
+            a {
+                transition: color 250ms ease;
+
+                &:hover {
+                    color: $plufs;
+                }
+            }
+        }
+    }
+
+    &_title {
+        width: 100%;
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: $white;
+        padding: 3px 2px;
+        letter-spacing: 5px;
+        border-bottom: solid 2px rgba($peach, $alpha: .5);
+    }
+
+    &_copyright {
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+        font-size: 11px;
+        opacity: .7;
+    }
+
+    &_social-link {
+        display: flex;
+        align-items: center;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            color: $peach;
+
+            path {
+                fill: $peach;
+            }
+        }
+    }
+}

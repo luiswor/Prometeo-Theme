@@ -1,0 +1,96 @@
+@import "../utils/utils";
+
+
+.f-l {
+    font-family: $l_font;
+}
+.f-ld {
+    font-family: $ld_font;
+}
+.f-p {
+    font-family: $p_font;
+}
+.f-s {
+    font-family: $s_font;
+}
+.f-t {
+    font-family: $t_font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 2rem 0;
+}
+
+
+
+.h1 {
+    font-size: clamp(2.5rem, 6vw, 60px);
+}
+
+.h2 {
+    font-size: clamp(2rem, 5vw, 44px);
+}
+
+.h3 {
+    font-size: clamp(1.6rem, 5vw, 36px);
+}
+
+.h4 {
+    font-size: clamp(1.3rem, 4vw, 30px);
+}
+
+.h5 {
+    font-size: clamp(1.15rem, 4vw, 24px);
+}
+
+.h6 {
+    font-size: clamp(1rem, 4vw, 20px);
+}
+
+
+p {
+    font-size: 1rem;
+    margin: 1rem 0;
+}
+.min {
+    font-size: .8rem;
+}
+.max {
+    font-size: 1.3rem;
+}
+
+
+.ital {
+    font-style: italic;
+}
+.semibold {
+    font-weight: 600;
+}
+.bold {
+    font-weight: 700;
+}
+
+
+.t-center {
+    text-align: center;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+
+.color-light {
+    color: $white;
+}
+
+.color-default {
+    color: $dark_blue;
+}
+
+.color-alert {
+    color: $plufs;
+}
+.color-danger {
+    color: $orange;
+}

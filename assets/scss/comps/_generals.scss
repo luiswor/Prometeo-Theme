@@ -1,0 +1,139 @@
+@import "../utils/utils";
+
+.ovh {
+    overflow: hidden;
+}
+
+
+.bg-darkblue {
+    background-color: $dark_blue;
+    --color-text: #fff;
+}
+.bg-lightblue {
+    background-color: $light_blue;
+    --color-text: #{$dark_blue};
+}
+
+.bg-orange {
+    background-color: $orange;
+    --color-text: #fff;
+}
+
+.bg-light {
+    background-color: $gray_light;
+    --color-text: #{$dark_blue};
+}
+
+.bg-white-y {
+    background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 20%, rgba(255,255,255,1) 80%, rgba(255,255,255,0) 100%);
+}
+
+
+.btn-link {
+    width: max-content;
+    display: block;
+    border: solid 1px $blue_slide;
+    border-radius: 3px;
+    color: $blue_slide;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all .3s;
+
+    &.small {
+        font-size: .8rem;
+        padding: 8px 10px;
+    }
+
+    &:hover {
+        background-color: $blue_slide;
+        color: $light_blue;
+    }
+}
+.container_leftright {
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    gap: 3rem;
+}
+
+.page_right {
+    &_content {
+        position: sticky;
+        top: 10rem;
+    }
+}
+.content {
+    p {
+        font-family: $t_font;
+        font-size: clamp(1rem, 4vw, 1.3rem);
+        line-height: 1.6;
+        color: $blue_slide;
+        margin: 3rem 0;
+    }
+}
+
+.txt-base{
+    
+        font-family: $t_font;
+        font-size: clamp(1rem, 4vw, 1.3rem);
+        line-height: 1.6;
+        color: $blue_slide;
+        margin: 3rem 0;
+    
+}
+
+
+.wpb-page-list{
+    display: block;
+    margin: 10px 0 35px;
+}
+.wpb-page-list__item{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-column-gap: 16px;
+    align-items: center;
+    text-decoration: none;
+    margin: 10px 0;
+}
+.wpb-page-list__item h4{
+    font-family: $s_font;
+    font-size: 1.4rem;
+    text-decoration: underline;
+    text-decoration: none;
+    transition: color .2s;
+
+    &:hover {
+        color: $peach;
+    }
+}
+.wpb-post-list img,
+.wpb-post-list__no-image{
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+.wpb-post-list__no-image{
+    background: #e5e5e5;
+}
+.wpb-page-list__item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.breadcrumb {
+    color: #c1c1c1;
+
+    &_last {
+        color: #fff;
+        font-weight: 600;
+    }
+
+    a {
+        transition: color .2s;
+    
+        &:hover {
+            color: $peach;
+        }
+    }
+}

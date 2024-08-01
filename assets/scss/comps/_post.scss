@@ -1,0 +1,152 @@
+@import "../utils/utils";
+
+.hero_post {
+    width: 100%;
+    height: auto;
+    background-color: $blue_slide;
+    padding: calc(var(--header-height) + 3rem) 2rem 3rem;
+    isolation: isolate;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 4vw;
+        height: 4vw;
+        clip-path: polygon(0 0, 0% 100%, 100% 0);
+        background-color: $blue_slide;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        translate: 0 99% 0;
+    }
+
+    &_title {
+        color: $plufs;
+    }
+
+    &_description {
+        color: $gray_light;
+    }
+
+    > svg {
+        position: absolute;
+        z-index: -1;
+        height: 100%;
+        width: auto;
+        right: 0;
+        top: 0;
+    }
+}
+
+.post {
+    &_content {
+        padding: 4rem 0;
+
+        .container {
+            display: grid;
+            grid-template-columns: 8fr 4fr;
+            gap: 3rem;
+        }
+    }
+
+
+    &_body {
+    }
+
+    &_aside {
+        padding: 2rem;
+
+        &_content {
+            width: 100%;
+            position: sticky;
+            top: 10rem;
+            border-top: solid 1px $light_blue;
+        }
+
+        .widget_block {
+            display: block;
+            margin: 1rem 0;
+            padding: 1 0;
+            border-bottom: solid 1px $light_blue;
+        }
+
+        .wp-block-heading {
+            font-family: $s_font;
+            margin: 3rem 0 1rem 0;
+            color: $blue_dark;
+        }
+    }
+
+}
+
+.archive {
+    &_container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        gap: 2rem;
+        padding: 4rem 1rem 8rem;
+    }
+}
+
+.post_card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: -10px 10px 10px #efefef;
+
+
+    &:hover {
+        --color-title: #{$intense};
+    }
+
+    &_img {
+        width: 100%;
+        aspect-ratio: 3/2;
+        overflow: hidden;
+        background-color: $light_blue;
+        clip-path: polygon(calc(100% - 4rem) 0%, 100% 4rem, 100% 100%, 0 100%, 0 0);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &_info {
+        width: 100%;
+        padding: 2rem;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        background-color: #fbfbfb;
+        border: solid 1px $gray_light;
+
+        .btn-link {
+            float: right;
+            margin-top: 1rem;
+            align-self: flex-end;
+        }
+    }
+
+    &_date {
+        font-size: .9rem;
+        margin: 15px 0;
+    }
+
+    &_title {
+        margin: 0;
+        padding: 5px 0 1rem;
+        color: var(--color-title, $blue_dark);
+        transition: color .3s ease;
+    }
+
+    &_excerpt {
+        display: -webkit-box; 
+        -webkit-line-clamp: 3; 
+        -webkit-box-orient: vertical; 
+        overflow: hidden; 
+        text-overflow: ellipsis;
+        line-height: 2;
+    }
+
+}
